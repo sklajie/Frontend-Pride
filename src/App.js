@@ -1,8 +1,5 @@
 import IconLaslesVpn from "./assets/Logo.png";
 import Ilustration1 from "./assets/Illustration_1.png";
-import IconMaps from "./assets/maps.png";
-import IconUsers from "./assets/users.png";
-import IconServer from "./assets/server.png";
 import Ilustration2 from "./assets/Illustration_2.png";
 import Check from "./assets/Check.png";
 import Global from "./assets/Huge_Global.png";
@@ -22,74 +19,83 @@ import TitleDesc from "./components/TitleDesc";
 import SubscribeNow from "./components/SubscribeNow";
 
 function App() {
-  const menus = ["About", "Features", "Pricing", "Testimonials", "Help"];
-  const section3 = [
+  const menus = ["Home", "Feature", "Price", "Demo", "About Us"];
+
+  const plans = [
     {
-      icon: IconMaps,
-      lable: "users",
-      total: "30+",
+      title: "Free",
+      features: [
+        "Basic Task Management",
+        "Team Colaboration",
+        "Basic Notifications",
+        "Simple Scheduling",
+        "Project Dahboard",
+        "Unlimited Project",
+        "Advance Project Management",
+        "Aplication Integration",
+      ],
+      price: "$0",
     },
     {
-      icon: IconUsers,
-      lable: "users",
-      total: "30+",
+      title: "Basic",
+      features: [
+        "Basic Task Management",
+        "Team Colaboration",
+        "Basic Notifications",
+        "Simple Scheduling",
+        "Project Dahboard",
+        "Unlimited Project",
+        "Advance Project Management",
+        "Aplication Integration",
+      ],
+      price: "$25 / Month",
     },
     {
-      icon: IconServer,
-      lable: "users",
-      total: "30+",
+      title: "Premium",
+      features: [
+        "Basic Task Management",
+        "Team Colaboration",
+        "Basic Notifications",
+        "Simple Scheduling",
+        "Project Dahboard",
+        "Unlimited Project",
+        "Advance Project Management",
+        "Aplication Integration",
+      ],
+      price: "$100 / Month",
+    },
+    {
+      title: "Costume",
+      features: [
+        "Basic Task Management",
+        "Team Colaboration",
+        "Basic Notifications",
+        "Simple Scheduling",
+        "Project Dahboard",
+        "Unlimited Project",
+        "Advance Project Management",
+        "Aplication Integration",
+      ],
+      price: "$150 / Month",
     },
   ];
 
   const features = [
-    "Powerfull online protection.",
-    "Internet without borders.",
-    "Internet without borders.",
-    "No specific time limits.",
-  ];
-
-  const plans = [
-    {
-      title: "Free Plan",
-      features: [
-        "Unlimited Bandwitch",
-        "Encrypted Connection",
-        "No Traffic Logs",
-        "Works on All Devices",
-      ],
-      price: "Free",
-    },
-    {
-      title: "Standard Plan",
-      features: [
-        "Unlimited Bandwitch",
-        "Encrypted Connection",
-        "No Traffic Logs",
-        "Works on All Devices",
-        "Connect Anyware",
-      ],
-      price: "$9 / mo",
-    },
-    {
-      title: "Premium Plan",
-      features: [
-        "Unlimited Bandwitch",
-        "Encrypted Connection",
-        "No Traffic Logs",
-        "Works on All Devices",
-        "Connect Anyware",
-        "Connect Anyware",
-      ],
-      price: "$12 / mo",
-    },
+    "In-Depth Understanding.",
+    "Personalization",
+    "Hands-on Experience",
+    "Informed Decision-Making",
+    "Expert Support",
+    "Time and Cost Savings",
   ];
 
   const sosmed = [Discord, reddit, Netflix, Spotify];
 
   return (
+    
     <div className="bg-white">
       <header className="container max-w-5xl mx-auto flex flex-row pt-12 items-center space-x-36">
-        <img alt="icon-laslesvpn" src={IconLaslesVpn} className="w-36" />
+      <h1 className="font-bold text-4xl pb-5">OS<span style={{ color: "red" }}>PRO</span></h1>
         <div className="flex-1">
           <ul className="flex flex-row space-x-6">
             {menus.map((val, index) => (
@@ -98,85 +104,61 @@ function App() {
           </ul>
         </div>
         <div className="space-x-6 flex flex-row items-center ">
-          <button className="font-bold">Sign In</button>
-          <button className="border border-red-500 rounded-full py-2 px-6">
-            Sign Up
+          <button className="border rounded-md bg-red-500 text-white py-1 px-6">
+            Login
           </button>
         </div>
-      </header>
+    </header>
       <main>
-        <div className="container max-w-5xl mx-auto  grid grid-cols-2 py-24">
+        <div className="container max-w-5xl mx-auto grid grid-cols-2 py-24">
           <div>
-            <h1 className="font-bold text-4xl pb-5">
-              Want anything to be easy
-              <br />
-              with LaslesVPN.
+            <h1 className="font-bold text-5xl pb-2">
+              Project Control At One
             </h1>
-            <div className="font-normal text-xs pb-12">
-              Provide a network for all your needs with ease and fun using
-              LaslesVPN discover interesting features from us.
+            <h1 className="font-bold font-color-red text-5xl pb-5" style={{ color: "red" }}>
+              Finger Touch
+            </h1>
+            <div className="font-normal text-xm pb-12">
+              Present the reality of the project field an o complete and
+              comprehensive Management Tool platform
             </div>
-            <button className="py-4 px-16 bg-red-500 rounded-md text-white drop-shadow-3xl">
-              Get Started
+            <button className="py-1 px-20 bg-red-500 rounded-md text-white drop-shadow-3xl">
+              Register
             </button>
           </div>
           <div>
             <img src={Ilustration1} alt="ilustration-laslesvpn" />
           </div>
         </div>
-        <div className="container max-w-5xl mx-auto grid grid-cols-3 shadow-2xl rounded-md py-4">
-          {section3.map((val, index) => {
-            return (
-              <div
-                key={index}
-                className={`flex flex-row py-4  space-x-6 justify-center ${
-                  index + 1 !== section3.length && "border-r border-gray-200"
-                }`}
-              >
-                <div className="rounded-full bg-red-100 p-3 ">
-                  <img alt={val.lable} src={val.icon} className="w-6 h-6" />
-                </div>
-                <div>
-                  <div>{val.total}</div>
-                  <div>{val.lable}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="container max-w-5xl mx-auto grid grid-cols-2 py-24  items-center ">
-          <img src={Ilustration2} alt={"features-lasles-vpn"} />
-          <div className="px-16 space-y-4 ">
-            <div className="font-medium text-3xl">
-              We Provide Many Features You Can Use
-            </div>
-            <div className="text-sm font-normal">
-              You can explore the features that we provide with fun and have
-              their own functions each feature.
-            </div>
-            {features.map((val, index) => {
+
+        <div className="bg-gray-50 py-24">
+          <TitleDesc
+            titlegrad={"Our Feature"}
+            desc={`Special feature create crate just for you, you can manage your plan and
+                  task better and faster than using other app`}
+          />
+
+          <div className=" container max-w-5xl mx-auto grid grid-cols-4 space-x-3">
+            {plans.map((val, index) => {
               return (
-                <div className="flex items-center space-x-3" key={index}>
-                  <img
-                    src={Check}
-                    alt="features-check-laslesvpn"
-                    className="w-6 h-6"
-                  />
-                  <div className="text-xs">{val}</div>
-                </div>
+                <CardPlan
+                  key={index}
+                  {...val}
+                  isSelect={index + 1 === plans.length}
+                />
               );
             })}
           </div>
         </div>
+          
         <div className="bg-gray-50 py-24">
           <TitleDesc
-            title={"Choose Your Plan"}
-            desc={`Let's choose the package that is best for you and explore it
-              happily and
-              cheerfully.`}
+            title={"Powerful features for"}
+            title2={"powerful businesses"}
+            desc={`choose a plan that's right for you`}
           />
 
-          <div className=" container max-w-5xl mx-auto grid grid-cols-3 space-x-6">
+          <div className=" container max-w-5xl mx-auto grid grid-cols-4 space-x-3">
             {plans.map((val, index) => {
               return (
                 <CardPlan
@@ -188,6 +170,40 @@ function App() {
             })}
           </div>
 
+          <div className="bg-gray-50 py-24">  
+            <TitleDesc
+              title={
+                <h1>
+                  Schedule a <span style={{ color: "red" }}>Demo</span>
+                </h1>
+              }
+              desc={`Start your project with a ospro`}
+            />
+            <div className="container max-w-5xl mx-auto grid grid-cols-2  items-center ">
+              <img src={Ilustration2} alt={"features-lasles-vpn"} />
+              <div className="px-16 space-y-4 ">
+                <div className="font-medium text-3xl">
+                  We Provide Many Features You Can Use
+                </div>
+                <div className="text-sm font-normal">
+                  You can explore the features that we provide with fun and have
+                  their own functions each feature.
+                </div>
+                {features.map((val, index) => {
+                  return (
+                    <div className="flex items-center space-x-3" key={index}>
+                      <img
+                        src={Check}
+                        alt="features-check-laslesvpn"
+                        className="w-6 h-6"
+                      />
+                      <div className="text-xs">{val}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
           <div className="container max-w-5xl mx-auto py-24">
             <TitleDesc
               title={" Huge Global Network of Fast VPN"}
