@@ -1,0 +1,74 @@
+.myBG {
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+}
+
+.card {
+    margin-left: 100px;
+    padding-left: 100px;
+}
+
+.intro {
+    height: 400px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    }
+
+.nav-link {
+margin: 0 10px;
+}
+
+.button {
+    background-color: red;
+    color: white;
+}
+
+.custom-button {
+    width: 200px;
+}
+
+.text-color {
+    font-weight: 500;
+}
+
+.text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.trending {
+    height: auto;
+    background-color: white;
+    background-size: cover;
+}
+
+.superhero {
+    height: auto;
+    background-color: white;
+    background-size: cover;
+}
+
+.movieImage {
+    height: auto;
+    background-color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.images {
+    height: 500px;
+}
