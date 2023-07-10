@@ -7,7 +7,7 @@ function Navbar() {
     const menus = ["Home", "Feature", "Price", "Demo", "About Us"];
 
     return (
-        <nav className="navbar mx-auto flex flex-row pt-8 items-center justify-center bg-white shadow-xl" style={{ position: "fixed", top: 0, marginLeft: "7.5%", width: "85%" }}>
+        <nav className="navbar mx-auto flex flex-row pt-6 items-center justify-center bg-white shadow-xl" style={{ position: "fixed", top: 0, marginLeft: "7.5%", width: "85%" }}>
         <h1 className="font-bold text-2xl pb-5 px-10">
             OS<span style={{ color: "red" }}>PRO</span>
         </h1>
