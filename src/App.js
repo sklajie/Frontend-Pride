@@ -1,5 +1,4 @@
 import IconLaslesVpn from "./assets/Logo.png";
-import Ilustration1 from "./assets/Illustration_1.png";
 import Global from "./assets/Huge_Global.png";
 import Netflix from "./assets/sosmed/Netflix.png";
 import Spotify from "./assets/sosmed/Spotify.png";
@@ -9,16 +8,18 @@ import Facebook from "./assets/sosmed/Facebook.png";
 import Instagram from "./assets/sosmed/Instagram.png";
 import Twitter from "./assets/sosmed/Twitter.png";
 import Asset from "./assets/image/Asset 1@2x.png"
+import Object from "./assets/image/object.png";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Navbar from "./components/Navbar";
 import CardPlan from "./components/CardPlan";
 import Review from "./components/Review";
 import TitleDesc from "./components/TitleDesc";
 import SubscribeNow from "./components/SubscribeNow";
 
 function App() {
-  const menus = ["Home", "Feature", "Price", "Demo", "About Us"];
+
 
   const plans = [
     {
@@ -91,42 +92,30 @@ function App() {
   const sosmed = [Discord, reddit, Netflix, Spotify];
 
   return (
-    
+
+    <>
+    <Navbar />
     <div className="bg-white">
-      <header className="container max-w-5xl mx-auto flex flex-row pt-12 items-center space-x-36">
-      <h1 className="font-bold text-4xl pb-5">OS<span style={{ color: "red" }}>PRO</span></h1>
-        <div className="flex-1">
-          <ul className="flex flex-row space-x-6">
-            {menus.map((val, index) => (
-              <li key={index}>{val}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="space-x-6 flex flex-row items-center ">
-          <button className="border rounded-md bg-red-500 text-white py-1 px-6">
-            Login
-          </button>
-        </div>
-    </header>
+
       <main>
-        <div className="container max-w-5xl mx-auto grid grid-cols-2 py-24">
-          <div>
-            <h1 className="font-bold text-5xl pb-2">
+        <div className="container mx-auto grid grid-cols-2 py-10" style={{ marginTop:"100px" }}>
+          <div className="py-24" style={{ marginTop: 100 }}>
+            <h1 className="font-semibold" style={{ fontSize:"64px" }}>
               Project Control At One
             </h1>
-            <h1 className="font-bold font-color-red text-5xl pb-5" style={{ color: "red" }}>
+            <h1 className="font-semibold font-color-red" style={{ color: "red", fontSize:"64px", }}>
               Finger Touch
             </h1>
-            <div className="font-normal text-xm pb-12">
+            <div style={{ fontSize:"20px", marginBottom:"17px", marginTop:"17px" }}>
               Present the reality of the project field an o complete and
               comprehensive Management Tool platform
             </div>
-            <button className="py-1 px-20 bg-red-500 rounded-md text-white drop-shadow-3xl">
+            <button className="bg-red-500 rounded-md text-white " style={{ width:"324px", height: "50px", fontSize:"20px" }}>
               Register
             </button>
           </div>
           <div>
-            <img src={Ilustration1} alt="ilustration-laslesvpn" />
+            <img style={{marginLeft:100, height:748, width: 748, }} src={Object} alt="object" />
           </div>
         </div>
 
@@ -264,6 +253,7 @@ function App() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
 
