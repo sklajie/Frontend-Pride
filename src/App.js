@@ -180,6 +180,7 @@ function App() {
             />
           </div>
 
+
           <div className="container max-w-7xl mx-auto grid grid-cols-2  ">
               <img src={Asset} style={{ width: '722px', height: '390px', paddingRight: '10px' }} alt="" />
               <div className="px-16 space-y-3" style={{ paddingTop: '90px' }}>
