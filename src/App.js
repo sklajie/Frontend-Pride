@@ -17,6 +17,7 @@ import CardPlan from "./components/CardPlan";
 import Review from "./components/Review";
 import TitleDesc from "./components/TitleDesc";
 import SubscribeNow from "./components/SubscribeNow";
+import BigCompanies from "./components/BigCompanies";
 
 function App() {
 
@@ -92,7 +93,6 @@ function App() {
   const sosmed = [Discord, reddit, Netflix, Spotify];
 
   return (
-
     <>
     <Navbar />
     <div className="bg-white">
@@ -167,6 +167,18 @@ function App() {
               }
               desc={`Start your project with a ospro`}
             />
+          </div>
+
+          <div className="bg-gray-50 py-24">  
+            <TitleDesc
+              title={
+                <h1>
+                  <span style={{ color: "red" }}>Big companies</span> already use os<span style={{ color: "red" }}>pro</span>
+                </h1>
+              }
+            />
+
+            <BigCompanies />
           </div>
 
 
