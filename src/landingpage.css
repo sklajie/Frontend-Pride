@@ -36,10 +36,11 @@ margin: 0 10px;
 
 .text-color {
     font-weight: 500;
-}
 
-.text {
-    font-family: 'Poppins', sans-serif;
+.teks {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
 }
 
 .title {

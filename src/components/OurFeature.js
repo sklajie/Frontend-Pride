@@ -13,7 +13,7 @@ export default function OurFeature() {
                             <div className="bg-white">
                                 <div className="p-2 m-1 text-dark">
                                 <Card.Title style={{ color: '#D8100B', fontSize: '25px', fontFamily: 'Poppins, sans-serif' }} className="text">Curve</Card.Title>
-                                <Card.Text className="text-left">
+                                <Card.Text className="text-left" style={{ fontSize: '16px' }}>
                                     Unleash your potential with Curve Services. Experience innovation, growth, and success.
                                 </Card.Text>
                                 </div>
