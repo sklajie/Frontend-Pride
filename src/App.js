@@ -20,6 +20,11 @@ import Review from "./components/Review";
 import TitleDesc from "./components/TitleDesc";
 import SubscribeNow from "./components/SubscribeNow";
 import BigCompanies from "./components/BigCompanies";
+import OurFeatures from "./components/OurFeature";
+import Curve from "./assets/image/Curve.png";
+import Absence from "./assets/image/Absence.png";
+import Money from "./assets/image/Money.png";
+import Vector from "./assets/image/Vector.png";
 
 function App() {
 
@@ -124,9 +129,27 @@ function App() {
 
         <div className="bg-gray-50 py-10">
           <TitleDesc
-            titlegrad={"Our Feature"}
+            title={<h1 style={{ background: "linear-gradient(to right, #D8100B, #DE674D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Our Feature</h1>}
             desc={`Special feature create crate just for you, you can manage your plan and
                   task better and faster than using other app`}
+          />
+
+          <div className=" container max-w-8xl mx-auto grid grid-cols-4 space-x-3">
+            <OurFeatures title="Curve" imge={Curve} desc="Unleash your potential with Curve Services. Experience innovation, growth, and success."/>
+            <OurFeatures title="Absence" imge={Absence} desc="Effortlessly manage absence with Absence Services. Simplify processes, save time, and ensure smooth operation."/>
+            <OurFeatures title="Budget" imge={Money} desc="Empower your financial journey with Budget Services. Take Control, set goals, and thrive."/>
+            <OurFeatures title="Gantt" imge={Vector} desc="Visualize your project's progress with Gantt Chart Services. Simplify planning, track milestone, and achive project success"/>
+          </div>
+          <hr className="my-3 border-gray-"></hr>
+        </div>
+          
+        <div className="bg-gray-50 py-10">
+          <TitleDesc
+            title={<>
+                    <h1>Powerful features for</h1>
+                    <h1 style={{ color: 'red' }}>powerful businesses</h1>
+                  </> }
+            desc={`choose a plan that's right for you`}
           />
 
           <div className=" container max-w-8xl mx-auto grid grid-cols-4 space-x-3">
@@ -141,15 +164,6 @@ function App() {
               );
             })}
           </div>
-        </div>
-          
-        <div className="bg-gray-50 py-10">
-          <TitleDesc
-            title={"Powerful features for"}
-            title2={"powerful businesses"}
-            desc={`choose a plan that's right for you`}
-          />
-
 
           <div className="bg-gray-50 py-10">  
             <TitleDesc
