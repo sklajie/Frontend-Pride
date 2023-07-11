@@ -1,13 +1,8 @@
-import IconLaslesVpn from "./assets/Logo.png";
 import Ilustration2 from "./assets/Illustration_2.png";
-import Global from "./assets/Huge_Global.png";
 import Netflix from "./assets/sosmed/Netflix.png";
 import Spotify from "./assets/sosmed/Spotify.png";
 import Discord from "./assets/sosmed/Discord.png";
 import reddit from "./assets/sosmed/reddit.png";
-import Facebook from "./assets/sosmed/Facebook.png";
-import Instagram from "./assets/sosmed/Instagram.png";
-import Twitter from "./assets/sosmed/Twitter.png";
 import Asset from "./assets/image/Asset 1@2x.png"
 import Object from "./assets/image/object.png";
 import Check from "./assets/Check.png"
@@ -16,10 +11,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "./components/Navbar";
 import CardPlan from "./components/CardPlan";
-import Review from "./components/Review";
 import TitleDesc from "./components/TitleDesc";
-import SubscribeNow from "./components/SubscribeNow";
 import BigCompanies from "./components/BigCompanies";
+import Footer from "./components/Footer";
 import OurFeatures from "./components/OurFeature";
 import Curve from "./assets/image/Curve.png";
 import Absence from "./assets/image/Absence.png";
@@ -231,72 +225,12 @@ function App() {
                 </div>
               </div>
             </div>
-
-          <div className="container max-w-5xl mx-auto py-24">
-            <TitleDesc
-              title={" Huge Global Network of Fast VPN"}
-              desc={` See LaslesVPN everywhere to make it easier for you when you move locations.`}
-            />
-
-            <img src={Global} alt={"Global"} className="my-20" />
-            <div className="flex flex-row justify-center">
-              {sosmed.map((val, index) => (
-                <img key={index} src={val} className="w-44 h-14" alt={val} />
-              ))}
-            </div>
           </div>
-
-          <Review />
-        </div>
-        <div className="bg-gray-100">
-          <SubscribeNow />
-        </div>
-      </main>
-      <footer className="bg-gray-100 py-20">
-        <div className="container mx-auto max-w-5xl flex flex-row  space-x-24">
-          <div className="flex-1 space-y-5">
-            <img src={IconLaslesVpn} alt="logo lasles vpn" className="w-36" />
-            <div>
-              LaslesVPN is a private virtual network that <br />
-              has unique features and has high security.
-            </div>
-            <div className="flex flex-row">
-              <img src={Facebook} alt="facebook icon" className="w-16 h-16" />
-              <img src={Twitter} alt="twitter icon" className="w-16 h-16" />
-              <img src={Instagram} alt="IG icon" className="w-16 h-16" />
-            </div>
-            <div>©2020LaslesVPN</div>
-          </div>
-          <div className="">
-            <div className="text-lg font-semibold mb-6">Product</div>
-            <ul className="space-y-6 text-sm text-gray-500">
-              <li>Pricing</li>
-              <li>Locations</li>
-              <li>Server</li>
-              <li>Countries</li>
-              <li>Blog</li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-lg font-semibold mb-6">Engage</div>
-            <ul className="space-y-6  text-sm text-gray-500">
-              <li>LaslesVPN ? </li>
-              <li>FAQ</li>
-              <li>Tutorials</li>
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-lg font-semibold mb-6">Earn Money</div>
-            <ul className="space-y-6  text-sm text-gray-500">
-              <li>Affiliate</li>
-              <li>Become Partner</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-    </div>
+          
+        <Footer />
+        </main>
+        
+      </div>
     </>
   );
 }
