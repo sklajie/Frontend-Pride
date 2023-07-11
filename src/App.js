@@ -92,7 +92,6 @@ function App() {
     "Time and Cost Savings",
   ];
 
-  const sosmed = [Discord, reddit, Netflix, Spotify];
 
   return (
     <>
