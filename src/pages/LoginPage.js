@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './pages/Login';
+import Login from './Login';
 import Gambar from "./assets/image/OSPRO.jpg";
 import "./App.css";
 import "./pages/Registrasi"

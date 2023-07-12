@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Checkbox, FormControlLabel } from "@mui/material";
 import './Registrasi.css'
+import Logo from "../assets/image/LogoOspro.png"
 
 function Registrasi() {
   const RegistrationForm = () => {
@@ -27,29 +28,11 @@ function Registrasi() {
     return (
       <div className="card-body">
         <form onSubmit={handleSubmit}>
-          <Box>
-            <Typography
-              inline
-              component="span"
-              variant="h4"
-              color="#333333"
-              fontWeight="bold"
-              type
-            >
-              OS
-            </Typography>
-            <Typography
-              inline
-              component="poppins"
-              variant="h4"
-              color="#D8100B"
-              fontWeight="bold"
-            >
-              PRO
-            </Typography>
-          </Box>
+          <br />
+            <img src={Logo} style={{width:"138px", height:"29px"}}/>
           <div>
             <label htmlFor="name">Your fullname</label>
+            <br />
             <input
               type="text"
               id="name"
@@ -61,6 +44,7 @@ function Registrasi() {
           </div>
           <div>
             <label htmlFor="cname">Company Name</label>
+            <br />
             <input
               type="cname"
               id="cname"
@@ -72,6 +56,7 @@ function Registrasi() {
           </div>
           <div>
             <label htmlFor="title">Title</label>
+            <br />
             <input
               type="title"
               id="title"
@@ -83,6 +68,7 @@ function Registrasi() {
           </div>
           <div>
             <label htmlFor="bmail">Business Email</label>
+            <br />
             <input
               type="bmail"
               id="bmail"
@@ -92,13 +78,15 @@ function Registrasi() {
               placeholder="Enter email address"
             />
           </div>
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Ingatkan Saya"
-          />
+          /> */}
+            <center>
             <button type="submit">
               <Box>Request a Demo</Box>
             </button>
+            </center>
         </form>
       </div>
     );

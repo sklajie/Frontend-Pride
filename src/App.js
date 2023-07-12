@@ -1,8 +1,6 @@
+import { ThemeProvider, createTheme } from "@mui/material";
+
 import Ilustration2 from "./assets/Illustration_2.png";
-import Netflix from "./assets/sosmed/Netflix.png";
-import Spotify from "./assets/sosmed/Spotify.png";
-import Discord from "./assets/sosmed/Discord.png";
-import reddit from "./assets/sosmed/reddit.png";
 import Asset from "./assets/image/Asset 1@2x.png"
 import Object from "./assets/image/object.png";
 import Check from "./assets/Check.png"
@@ -10,7 +8,7 @@ import Check from "./assets/Check.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "./components/Navbar";
-import CardPlan from "./components/CardPlan";
+import CardPlan from "./components/CardPlan"; 
 import TitleDesc from "./components/TitleDesc";
 import BigCompanies from "./components/BigCompanies";
 import Footer from "./components/Footer";
@@ -19,9 +17,23 @@ import Curve from "./assets/image/Curve.png";
 import Absence from "./assets/image/Absence.png";
 import Money from "./assets/image/Money.png";
 import Vector from "./assets/image/Vector.png";
+import Registrasi from "./components/Registrasi";
+
 
 function App() {
 
+  const Theme = createTheme({
+    typography:{
+      "fontFamily": `"Exo", "Helvetica", "Arial", "sans-serif"`,
+      "fontSize" : 14,
+      "fontWeightLight":  300,
+      "fontWeightMedium" : 400,
+      "fontWeightRegular" : 500,
+      "fontWeightBold" : 700
+    }
+      
+  })
+  
 
   const plans = [
     {
@@ -97,7 +109,6 @@ function App() {
     <>
     <Navbar />
     <div className="bg-white">
-
       <main>
         <div className="container mx-auto grid grid-cols-2 py-10" style={{ marginTop:"100px" }}>
           <div className="py-24" style={{ marginTop: 100 }}>
@@ -162,14 +173,17 @@ function App() {
             <TitleDesc
               title={
                 <h1>
-                  Schedule a <span style={{ color: "red" }}>Demo</span>
+                  Schedule a <span style={{ color: '#D8100B' }}>Demo</span>
                 </h1>
               }
               desc={`Start your project with a ospro`}
             />
 
-            <div className="container max-w-5xl mx-auto grid grid-cols-2  items-center ">
-                <img src={Ilustration2} alt={"features-lasles-vpn"} />
+            <div className="container max-w-8xl mx-auto grid grid-cols-2  items-center ">
+                <ThemeProvider theme={Theme}>
+                  <Registrasi/>
+                </ThemeProvider>
+
                 <div className="px-16 space-y-4 ">
                   <div className="font-medium text-3xl">
                     We Provide Many Features You Can Use

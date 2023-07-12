@@ -6,7 +6,7 @@ export default function OurFeature({title, imge, desc}) {
             <Container>
                 <Row>
                     <Col md={4} className="movieWrapper" id="trending">
-                        <Card style={{ width: '20rem', paddingLeft: '4rem' }} >
+                        <div style={{ width: '20rem', paddingLeft: '4rem' }} >
                             <Image style={{ width: '50px', height: '50px', marginLeft: '10px' }} src={imge} alt="" className="image"/>
                             <div>
                                 <div className="p-1 m-1 text-dark">
@@ -15,7 +15,7 @@ export default function OurFeature({title, imge, desc}) {
                                 </Card.Text>
                                 </div>
                             </div>
-                        </Card>
+                        </div>
                     </Col>
                 </Row>
             </Container>
