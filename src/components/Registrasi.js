@@ -26,7 +26,7 @@ function Registrasi() {
     };
 
     return (
-      <div className="card-body">
+      <div className="card-body" id="Registrasi">
         <form onSubmit={handleSubmit}>
           <br />
             <img src={Logo} style={{width:"138px", height:"29px"}}/>

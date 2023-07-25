@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import Check from "../assets/Check.png";
+import Ceklis from "../assets/image/Ceklis.png";
+import Silang from "../assets/image/Silang.png";
 
-function CardPlan({ title, desc, price, features, isSelect }) {
+function CardPlan({ title, desc, price, features, featuresx, isSelect }) {
   const [selected, setSelected] = useState(isSelect);
 
   const handleButtonClick = () => {
@@ -12,14 +13,20 @@ function CardPlan({ title, desc, price, features, isSelect }) {
   return (
     <div
       className={`bg-white rounded-md flex flex-col justify-between items-center  pt-16 pb-8 border ${
-        selected ? "bg-blue-500 text-white" : "border-gray-300"
-      }`}
+        selected ? "bg-blue-500 text-white" : "border-white-300"
+      }`} id="CardPlan"
+      style={{ height: "817px", width: "307.5px" }}
     >
-      <div className="space-y-5 flex flex-col justify-center items-center">
-        <h1 className="font-bold items-left" style={{ fontSize:30}}>{title}</h1>
-        <span style={{ fontSize:"16px", marginLeft:65, marginRight:50 }}>{desc}</span>
+      <div className="space-y-5 flex flex-col justify-center items-start" style={{ paddingLeft:"30px" }}>
+        <span className="font-semibold" style={{fontSize: "22px"}}>{title}</span>
+        <span style={{ fontSize:"16px", color: selected ? "white" : "#787878"}}>{desc}</span>
         <div className="mt-11">
-          <div className="mb-3 grid grid-col-2" style={{ fontSize:50 }}><div>{price}</div><div>/Month</div></div>
+
+        <div className="mb-3" style={{ fontSize: 50, display: "flex", alignItems: "center" }}>
+          <span>{price}</span>
+          <span style={{ fontSize: "16px", color: selected ? "white" : "#787878", marginLeft: "5px" }}>/Month</span>
+        </div>
+        
           <button
             className={`border rounded-md py-1 px-16 border-blue-500  ${
               selected ? "bg-white text-blue-500" : "bg-white text-blue-500"
@@ -34,13 +41,25 @@ function CardPlan({ title, desc, price, features, isSelect }) {
             return (
               <div
                 key={index}
-                className="flex flex-row mr-2 px-5 items-center space-x-2"
+                className="flex flex-row mr-2 items-center space-x-2"
               >
-                <img src={Check} alt="check-success" className="w-5 h-5" />
+                <img src={Ceklis} alt="check-success" className="w-8 h-8" />
                 <div>{val}</div>
               </div>
             );
           })}
+          {featuresx.map((val, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-row mr-2 items-center space-x-2"
+              >
+                <img src={Silang} alt="check-success" className="w-8 h-8" />
+                <div style={{ color: selected ? "white" : "#787878" }}>{val}</div>
+              </div>
+            );
+          })}
+          
         </div>
       </div>
     </div>
