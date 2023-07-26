@@ -18,23 +18,22 @@ import Absence from "../assets/image/Absence.png";
 import Money from "../assets/image/Money.png";
 import Vector from "../assets/image/Vector.png";
 import Registrasi from "../components/Registrasi";
-import Home from "../components/Home";
+import ProjectControl from "../components/ProjectControl";
 
 
-function App() {
+function Home() {
 
-  const Theme = createTheme({
+    const Theme = createTheme({
     typography:{
-      "fontFamily": `"Exo", "Helvetica", "Arial", "sans-serif"`,
-      "fontSize" : 14,
-      "fontWeightLight":  300,
-      "fontWeightMedium" :  400,
-      "fontWeightRegular" :  500,
-      "fontWeightBold" :  700
+        "fontFamily": `"Exo", "Helvetica", "Arial", "sans-serif"`,
+        "fontSize" : 14,
+        "fontWeightLight":  300,
+        "fontWeightMedium" :  400,
+        "fontWeightRegular" :  500,
+        "fontWeightBold" :  700
     }
-      
-  })
-  
+})
+
 
   const plans = [
     {
@@ -118,12 +117,11 @@ function App() {
   return (
 
     <>
-
     <Navbar />
     <div className="bg-white">
       <main>
         <div className="Home">
-          <Home />
+          <ProjectControl />
         </div>
 
         <div id="OurFeature">
@@ -245,4 +243,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

@@ -1,6 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from "../assets/image/LogoOspro.png";
-import { Navbar, Container, Nav, Button } from "react-bootstrap"
+import { Navbar, Container, Nav, Button } from "react-bootstrap";
 
 const NavigationBar = () => {
   // Fungsi untuk menangani scroll ke elemen yang sesuai dengan sedikit slide ke atas
@@ -16,6 +17,7 @@ const NavigationBar = () => {
     }
   };
 
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -31,7 +33,7 @@ const NavigationBar = () => {
           </Nav>
         </div>
         <div className="space-x-6 flex flex-row items-center">
-          <button className="border rounded-md bg-red-500 text-white" style={{ width:"73px", height:"40px", borderRadius:"5px", fontSize:"16px", marginRight:"185px", backgroundColor: '#D8100B', color: '#FFFFFF' }}>
+          <button onClick={() => navigate('/login')} className="border rounded-md bg-red-500 text-white" style={{ width:"73px", height:"40px", borderRadius:"5px", fontSize:"16px", marginRight:"185px", backgroundColor: '#D8100B', color: '#FFFFFF' }}>
             Login
           </button>
         </div>
