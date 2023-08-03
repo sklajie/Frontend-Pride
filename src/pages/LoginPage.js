@@ -1,6 +1,6 @@
 import React from "react";
 import Gambar from "../assets/image/Login.png";
-import { ArrowBack} from "@mui/icons-material";
+import { ArrowBack } from "@mui/icons-material";
 import { Box, Button, FormControl, Grid, IconButton, Input, InputLabel, Link, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import "../assets/css/Login.css"

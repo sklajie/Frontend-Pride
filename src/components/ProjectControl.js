@@ -1,7 +1,11 @@
 import React from 'react';
 import Object from "../assets/image/object.png";
+import { useNavigate } from 'react-router-dom';
 
 const ProjectControl = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className="container mx-auto grid grid-cols-2 py-10" id="Home" style={{ marginTop:"100px" }}>
             <div className="py-24" style={{ marginTop: 100 }}>
@@ -15,7 +19,7 @@ const ProjectControl = () => {
                     Present the reality of the project field an o complete and
                     comprehensive Management Tool platform
                 </div>
-                <button className="bg-red-500 rounded-md text-white " style={{ width:"324px", height: "50px", fontSize:"20px", color: '#FFFFFF', backgroundColor: '#D8100B' }}>
+                <button onClick={() => navigate('/register1')} className="bg-red-500 rounded-md text-white " style={{ width:"324px", height: "50px", fontSize:"20px", color: '#FFFFFF', backgroundColor: '#D8100B' }}>
                     Register
                 </button>
             </div>
