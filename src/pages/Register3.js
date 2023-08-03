@@ -64,7 +64,7 @@ const Register1 = () => {
                                 <label htmlFor="phone" style={{color: "rgba(0, 0, 0, 0.7)", fontSize: '17px', textDecoration: 'none'}}> 
                                     Your experience
                                 </label>
-                                <Input name="phone" id="phone" type="phone" style={{
+                                <input name="phone" id="phone" type="phone" style={{
                                 border: '1px solid gray', borderRadius: '10px', height: '110px', paddingLeft: '10px'}} />
                                 </FormControl>
                                 <br/>

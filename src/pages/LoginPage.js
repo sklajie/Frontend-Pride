@@ -60,12 +60,12 @@ const TwoColumnLayout = () => {
       <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
         <FormControl fullWidth>
           <label htmlFor="name" style={{color: 'black'}}> Email </label>
-          <Input name="email" id="email" type="email" placeholder="Enter your email" style={{
+          <input name="email" id="email" type="email" placeholder="Enter your email" style={{
           border: '1px solid gray', borderRadius: '17px', height: '50px', paddingLeft: '10px'}} />
         </FormControl>
         <FormControl fullWidth sx={{ my: 2 }}>
           <label fontWeight="bold" style={{color: 'black'}}> Password </label>
-          <Input name="password" id="password" type="password" placeholder="********" style={{
+          <input name="password" id="password" type="password" placeholder="********" style={{
           border: '1px solid gray', borderRadius: '17px', height: '50px', paddingLeft: '10px'}}/>
         </FormControl>
         <Box

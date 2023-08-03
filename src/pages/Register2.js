@@ -65,21 +65,29 @@ const Register1 = () => {
                                 <label htmlFor="phone" style={{color: "rgba(0, 0, 0, 0.7)", fontSize: '17px', textDecoration: 'none'}}> 
                                     Phone number
                                 </label>
-                                <Input name="phone" id="phone" type="phone" style={{
-                                border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}} />
+                                <div style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '10px', height: '60px'}}>
+                                    <select id='country' name='country'>
+                                        <option value="Indonesia">+62</option>
+                                        <option value="1">+1</option>
+                                    </select>
+
+                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" style={{
+                                    borderRight: '1px solid gray', borderRadius: '10px', height: '55px', paddingLeft: '10px', flex: 1, }} />
+                                </div>
+                                
                                 </FormControl>
                                 <FormControl fullWidth>
                                 <label htmlFor="address" style={{color: "rgba(0, 0, 0, 0.7)",fontSize: '17px', textDecoration: 'none'}}> 
                                     Your address
                                 </label>
-                                <Input name="address" id="address" type="address" placeholder="Please enter address" style={{
+                                <input name="address" id="address" type="address" placeholder="Please enter address" style={{
                                 border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}} />
                                 </FormControl>
                                 <FormControl fullWidth >
                                 <label fontWeight="bold" style={{color: "rgba(0, 0, 0, 0.7)",fontSize: '17px', textDecoration: 'none'}}>
                                     City 
                                 </label>
-                                <Input name="city" id="city" type="city" placeholder="Please input" style={{
+                                <input name="city" id="city" type="city" placeholder="Please input" style={{
                                 border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}}/>
                                 </FormControl>
                                 <Box

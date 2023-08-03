@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
-import { Box, Button, FormControl, IconButton, Input, Typography } from "@mui/material";
+import { Box, Button, FormControl, IconButton, Typography, } from "@mui/material";
 import "../assets/css/Login.css"
 
 import image1 from "../assets/image/regis1@1.png";
@@ -42,6 +42,19 @@ const Register1 = () => {
         console.log(formState);
     };
 
+    const [values, setValues] = useState({
+        password: '',
+        showPassword: false,
+    });
+    
+    const handleClickShowPassword = () => {
+        setValues({ ...values, showPassword: !values.showPassword });
+    };
+    
+    const handlePasswordChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+    };
+
     return (
         <div>
             <div className="containerStyle">
@@ -74,22 +87,37 @@ const Register1 = () => {
                                 <label htmlFor="name" style={{color: "rgba(0, 0, 0, 0.7)", fontSize: '17px', textDecoration: 'none'}}> 
                                     Your fullname*
                                 </label>
-                                <Input name="email" id="email" type="email" placeholder="Enter your email" style={{
+                                <input name="email" id="email" type="email" placeholder="Enter your email" style={{
                                 border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}} />
                                 </FormControl>
                                 <FormControl fullWidth>
                                 <label htmlFor="name" style={{color: "rgba(0, 0, 0, 0.7)",fontSize: '17px', textDecoration: 'none'}}> 
                                     Email address*
                                 </label>
-                                <Input name="email" id="email" type="email" placeholder="Enter email address" style={{
+                                <input name="email" id="email" type="email" placeholder="Enter email address" style={{
                                 border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}} />
                                 </FormControl>
                                 <FormControl fullWidth >
                                 <label fontWeight="bold" style={{color: "rgba(0, 0, 0, 0.7)",fontSize: '17px', textDecoration: 'none'}}>
                                     Create password* 
                                 </label>
-                                <Input name="password" id="password" type="password" placeholder="Enter password" style={{
-                                border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}}/>
+                                <div style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '10px', height: '60px' }}>
+                                    <input 
+                                        name="password" 
+                                        id="password" 
+                                        type={values.showPassword ? 'text' : 'password'} 
+                                        onChange={handlePasswordChange('password')} 
+                                        placeholder="Enter password"
+                                        style={{ borderLeft: '1px solid gray', borderRadius: '10px', height: '55px', flex: 1, paddingLeft: '10px',}}
+                                    />
+                                    <button 
+                                        onClick={handleClickShowPassword}
+                                        style={{ background: 'none', border: 'none',  }}
+                                    >
+                                        {values.showPassword ? "UnShow" : "Show"}
+                                    </button>
+                                    </div>
+
                                 </FormControl>
                                 <label style={{ color: "rgba(0, 0, 0, 0.7)" }}>
                                     <input type="checkbox" name="agreeToTerms" onChange={handleInputChange} style={{ marginRight: '10px' }} /> 
