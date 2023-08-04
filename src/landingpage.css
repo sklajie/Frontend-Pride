@@ -36,6 +36,7 @@ margin: 0 10px;
 
 .text-color {
     font-weight: 500;
+}
 
 .teks {
     grid-column: 2;
@@ -72,4 +73,13 @@ margin: 0 10px;
 
 .images {
     height: 500px;
+}
+
+.button-hover {
+    box-shadow: 0 0 10px #559FF8;
+}
+
+.CardPlans:hover {
+    background-color: #559FF8;
+    cursor: pointer;
 }

@@ -32,7 +32,8 @@
   
   .bagian-kiri {
     flex: 1;
-    padding: 20px;
+    padding: 140px;
+    padding-top: 24px;
     
   }
   
@@ -54,8 +55,8 @@
   button[type="login"] {
     width: 100px;
     background-color: #D8100B;
-    color: white;
-    padding: 10px 20px;
+    color: #ffffff;
+    padding: 21px;
     border: none;
     border-radius: 4px;
     cursor: pointer;

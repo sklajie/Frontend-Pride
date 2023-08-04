@@ -24,8 +24,8 @@ const TwoColumnLayout = () => {
       </div>
       <div className="rightColumnStyle">
       <IconButton  onClick={() => navigate('/')}>
-          <ArrowBack style={{ fontSize: '35px' }}/>
-          <span style={{ fontSize: '20px' }}>Back</span>
+          <ArrowBack style={{ fontSize: '35px', color: '#B4B5BA'}}/>
+          <span style={{ fontSize: '20px', color: '#B4B5BA' }}>Back</span>
         </IconButton>
     <Box component="div" sx={{ mt: 18, width: "450px", mx: "auto" }}>
       <Box sx={{ display: "flex", flexDirection: "row" }}>
@@ -44,6 +44,8 @@ const TwoColumnLayout = () => {
           variant="h4"
           color="#D8100B"
           fontWeight="bold"
+          height="24px"
+          width="111px"
         >
           PRO
         </Typography>
@@ -52,21 +54,21 @@ const TwoColumnLayout = () => {
         Welcome Back
       </Typography>
       <Typography
-        style={{ fontSize: "20px", color: "rgba(0, 0, 0, 0.7)" }}
+        style={{ fontSize: "14px", color: "#545454",  }}
         variant="h5"
       >
         Welcome back! Please enter your detail
       </Typography>
       <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
         <FormControl fullWidth>
-          <label htmlFor="name" style={{color: 'black'}}> Email </label>
+          <label htmlFor="name" style={{color: '#333333', fontSize: '18px'}}> Email </label>
           <Input name="email" id="email" type="email" placeholder="Enter your email" style={{
-          border: '1px solid gray', borderRadius: '17px', height: '50px', paddingLeft: '10px'}} />
+          border: '2px solid gray', borderRadius: '17px', height: '52px', weight: '419px', paddingLeft: '10px', color: '#B4B5BA', fontSize: '14px'}} />
         </FormControl>
         <FormControl fullWidth sx={{ my: 2 }}>
-          <label fontWeight="bold" style={{color: 'black'}}> Password </label>
+          <label fontWeight="bold" style={{color: '#333333', fontSize: '18px'}}> Password </label>
           <Input name="password" id="password" type="password" placeholder="********" style={{
-          border: '1px solid gray', borderRadius: '17px', height: '50px', paddingLeft: '10px'}}/>
+          border: '2px solid gray', borderRadius: '17px', height: '52px', weight: '419px', paddingLeft: '10px', color: '#B4B5BA', fontSize: '14px'}}/>
         </FormControl>
         <Box
           type="bbox"
@@ -75,16 +77,16 @@ const TwoColumnLayout = () => {
           justifyContent="center"
         >
           <div className="card-button">
-            <Button type="login" variant="contained" style={{ width:'450px' }}>
+            <Button type="login" variant="contained" style={{ width:'450px', textColor: '#FFFFFF', fontSize: '16px', height: '44px', backgroundColor: '#D8100B'}}>
               Log in
             </Button>
           </div>
         </Box>
         <div className="bawah">
           <Grid item>
-          <h>Dont have an account? </h>
+          <h style={{fontSize: '14px', color: '#545454'}}>Dont have an account? </h>
             <Link href="#" variant="body2" >
-              <h style={{color:'red'}}>Register</h>
+              <h style={{fontSize: '14px', color:'#DE674D',}}>Register</h>
             </Link>
           </Grid>
         </div>
