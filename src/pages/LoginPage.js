@@ -1,6 +1,6 @@
 import React from "react";
 import Gambar from "../assets/image/Login.png";
-import { ArrowBack} from "@mui/icons-material";
+import { ArrowBack } from "@mui/icons-material";
 import { Box, Button, FormControl, Grid, IconButton, Input, InputLabel, Link, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import "../assets/css/Login.css"
@@ -61,7 +61,8 @@ const TwoColumnLayout = () => {
       </Typography>
       <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
         <FormControl fullWidth>
-          <label htmlFor="name" style={{color: '#333333', fontSize: '18px'}}> Email </label>
+
+        <label htmlFor="name" style={{color: '#333333', fontSize: '18px'}}> Email </label>
           <Input name="email" id="email" type="email" placeholder="Enter your email" style={{
           border: '2px solid gray', borderRadius: '17px', height: '52px', weight: '419px', paddingLeft: '10px', color: '#B4B5BA', fontSize: '14px'}} />
         </FormControl>
@@ -69,6 +70,16 @@ const TwoColumnLayout = () => {
           <label fontWeight="bold" style={{color: '#333333', fontSize: '18px'}}> Password </label>
           <Input name="password" id="password" type="password" placeholder="********" style={{
           border: '2px solid gray', borderRadius: '17px', height: '52px', weight: '419px', paddingLeft: '10px', color: '#B4B5BA', fontSize: '14px'}}/>
+
+          <label htmlFor="name" style={{color: 'black'}}> Email </label>
+          <input name="email" id="email" type="email" placeholder="Enter your email" style={{
+          border: '1px solid gray', borderRadius: '17px', height: '50px', paddingLeft: '10px'}} />
+        </FormControl>
+        <FormControl fullWidth sx={{ my: 2 }}>
+          <label fontWeight="bold" style={{color: 'black'}}> Password </label>
+          <input name="password" id="password" type="password" placeholder="********" style={{
+          border: '1px solid gray', borderRadius: '17px', height: '50px', paddingLeft: '10px'}}/>
+
         </FormControl>
         <Box
           type="bbox"
