@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
+import "../assets/css/global.css"
 import { Box, Button, FormControl, IconButton, Input, Typography } from "@mui/material";
 // import "../assets/css/Login.css"
 
@@ -65,7 +66,7 @@ const Register1 = () => {
                                 <label htmlFor="phone" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}> 
                                     Phone number
                                 </label>
-                                <div style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '6px', height: '60px', fontSize: '12px', paddingLeft: '20px'}}>
+                                <div className="custombutton" style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '6px', height: '60px', fontSize: '12px', paddingLeft: '20px'}}>
                                     <select id='country' name='country'>
                                         <option value="Indonesia">+62</option>
                                         <option value="1">+1</option>
@@ -80,14 +81,14 @@ const Register1 = () => {
                                 <label htmlFor="address" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}> 
                                     Your address
                                 </label>
-                                <input name="address" id="address" type="address" placeholder="Please enter address" style={{
+                                <input className="custombutton" name="address" id="address" type="address" placeholder="Please enter address" style={{
                                 border: '1px solid gray', borderRadius: '6px', height: '60px', paddingLeft: '20px', fontSize: '12px'}}/>
                                 </FormControl>
                                 <FormControl fullWidth >
                                 <label fontWeight="bold" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}>
                                     City 
                                 </label>
-                                <input name="city" id="city" type="city" placeholder="Please input" style={{
+                                <input className="custombutton" name="city" id="city" type="city" placeholder="Please input" style={{
                                 border: '1px solid gray', borderRadius: '6px', height: '60px', paddingLeft: '20px', fontSize: '12px'}}/>
                                 </FormControl>
                                 <Box

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Person from "../assets/image/person.png"
 import Bussiness from "../assets/image/bussiness.png"
 // import { useEffect } from 'react';
-import "../assets/css/join.css"
+import "../assets/css/global.css"
 
 const TwoColumnLayout = () => {
 

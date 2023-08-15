@@ -25,3 +25,31 @@ body {
     font-weight: 700;
 }
 
+/* HOVER BLUE */
+
+.custombutton {
+    background-color: white !important;
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi saat perubahan tampilan */
+    
+}
+
+.custombutton:hover{ 
+    background-color: rgba(85, 159, 248, 0.1) !important;
+    border: 1.5px solid #559FF8 !important;
+    color: blue !important;
+}
+.custombutton:hover svg {
+    color: #559FF8 !important;
+    fill: #559FF8 !important; /* This targets the SVG's fill property */
+}
+
+.imgcustombutton:hover {
+    color: white !important;
+    box-sizing: border-box;  /* ensures padding is included in the element's total width and height */
+}
+.custombutton:hover .gmbr{
+    background-color: #559FF8;
+}
+.custombutton:hover .gmbr img{
+    filter: brightness(2) saturate(0);
+}

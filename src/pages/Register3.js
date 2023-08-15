@@ -3,6 +3,7 @@ import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
 import Lock from '@mui/icons-material/Lock';
 import { Box, Button, FormControl, IconButton, Input, Typography } from "@mui/material";
+import "../assets/css/global.css"
 // import "../assets/css/Login.css"
 
 import image1 from "../assets/image/regis2@1.png";
@@ -64,7 +65,7 @@ const Register1 = () => {
                                 <label htmlFor="phone" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '10px'}}> 
                                     Your experience
                                 </label>
-                                <input name="phone" id="phone" type="phone" style={{
+                                <input className="custombutton" name="phone" id="phone" type="phone" style={{
                                 border: '1px solid gray', borderRadius: '6px', height: '100px', paddingLeft: '20px', fontSize: '12px'}} />
                                 </FormControl>
                                 <br/>
