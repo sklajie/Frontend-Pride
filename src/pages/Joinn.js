@@ -40,7 +40,7 @@ const TwoColumnLayout = () => {
           Already have an account?{" "}
         </h>
         <Link
-          href="#"
+          href="/login"
           variant="body2"
           style={{ color: "rgba(128, 128, 128, 0.5)", fontStyle: 'Poppins' }}
         >
@@ -82,12 +82,10 @@ const TwoColumnLayout = () => {
                 <div className="gmbr" style={{ marginRight:"20px", border:"1.5px solid #559FF8", borderRadius:"5px"  }}>
                     <img src={Person} alt="person" style={{height: '15px', width: '15px', margin: '10px', marginRight:"18px" }}></img>
                     </div>
-                    
                     <div>
                         <div style={{color:"black", fontWeight: "bold", textTransform: "none", fontSize: '15px', fontFamily: "Poppins"}}>
                             Personal
                         </div>
-
                         {/* Typography kedua */}
                         <div style={{color:"gray", textTransform: "none", fontFamily: "Poppins", fontSize: '12px' }}>
                             Personal account to manage all your activities.
@@ -95,7 +93,6 @@ const TwoColumnLayout = () => {
                     </div>
                     <ArrowForward style={{ color:"white", fontSize: '20px' }}/>
                 </box>
-
               </Button>
 
               <Button
