@@ -4,7 +4,7 @@ import HomePage from "./pages/Home";
 import Register1 from './pages/Register1';
 import Register2 from './pages/Register2';
 import Register3 from './pages/Register3';
-import Join from './components/Joinn';
+import Join from './pages/Joinn';
 import SuccessfulRegistration from './pages/SuccessfulRegistration';
 
 function App() {

@@ -104,7 +104,15 @@
     margin: 0 auto;
   }
 
+.hoverregistrasi{
+  background-color: white !important;
+  transition: background-color 0.3s, color 0.3s; /* Efek transisi saat perubahan tampilan */
+  
+}
+.hoverregistrasi:hover{
 
-
+  border-color: blue !important;
+ box-shadow: '0 0 3px rgba(0, 0, 255, 0.3)';
+}
 
 

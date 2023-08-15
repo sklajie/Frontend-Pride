@@ -51,7 +51,7 @@ const Register1 = () => {
                         <div style={{ fontSize: "16px", color: "rgb(192, 192, 192)", textAlign: 'center'}} variant="h5">
                             The first step to an extraordinary experience with us.
                         </div>
-                        <button style={{ 
+                        <button onClick={() => navigate('/login')} style={{ 
                             color: 'red', 
                             width: '380px', 
                             height: '58px', 
