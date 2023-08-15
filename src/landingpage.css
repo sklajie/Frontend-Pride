@@ -74,3 +74,12 @@ margin: 0 10px;
 .images {
     height: 500px;
 }
+
+.button-hover {
+    box-shadow: 0 0 10px #559FF8;
+}
+
+.CardPlans:hover {
+    background-color: #559FF8;
+    cursor: pointer;
+}

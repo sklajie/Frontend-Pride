@@ -1,11 +1,11 @@
-import React from 'react';
-import Integrasia from '../assets/image/Asset 2@2x.png';
-import Twitter from '../assets/image/1.png';
-import Facebook from '../assets/image/2.png';
-import Instagram from '../assets/image/3.png';
-import Git from '../assets/image/4.png';
+    import React from 'react';
+    import Integrasia from '../assets/image/Asset 2@2x.png';
+    import Twitter from '../assets/image/1.png';
+    import Facebook from '../assets/image/2.png';
+    import Instagram from '../assets/image/3.png';
+    import Git from '../assets/image/4.png';
 
-const menus = ["Home", "Service", "Price", "About", "Contact", "Demo"];
+    const menus = ["Home", "Service", "Price", "About", "Contact", "Demo"];
 
 export default function Footer() {
   return (
