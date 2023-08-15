@@ -3,10 +3,10 @@ import { Card, Col, Container, Row, Image } from "react-bootstrap"
 export default function OurFeature({title, imge, desc}) {
     return(
         <div id="OurFeature">
-            <Container>
+            <div className="container" style={{ marginLeft:'20%' }}>
                 <Row>
-                    <Col md={4} className="movieWrapper">
-                        <div style={{ width: '20rem', paddingLeft: '4rem' }} >
+                    <Col md={4} className="">
+                        <div style={{ width: '295px', }} >
                             <Image style={{ width: '50px', height: '50px', marginLeft: '10px' }} src={imge} alt="" className="image"/>
                             <div>
                                 <div className="p-1 m-1 text-dark">
@@ -18,7 +18,7 @@ export default function OurFeature({title, imge, desc}) {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            </div>
         </div>
     )
 }

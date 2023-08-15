@@ -1,8 +1,8 @@
+import "../assets/css/global.css"
 import React, { useState } from 'react';
 import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
 import { Box, Button, FormControl, IconButton, Input, Typography } from "@mui/material";
-import "../assets/css/Login.css"
 
 import image1 from "../assets/image/regis2@1.png";
 import image2 from "../assets/image/regis3@2.png";
@@ -28,33 +28,55 @@ const Register1 = () => {
             <div className="containerStyle">
                 <div style={{ width: '100%' }}>
                     <div style={{ display: 'flex', marginTop: '20px' }}>
-                        <IconButton  onClick={() => navigate('/register2')}>
-                            <ArrowBack style={{ fontSize: '35px' }}/>
-                            <span style={{ fontSize: '20px' }}>Back</span>
+                        <IconButton  onClick={() => navigate('/register2')} style={{ marginLeft: '35px' }}>
+                            <ArrowBack style={{ fontSize: '30px', color: "rgb(192, 192, 192)" }}/>
+                            <span style={{ fontSize: '15px', color: "rgb(192, 192, 192)" }}>Back</span>
                         </IconButton>
                         <div style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                             {images.map((image, index) => (
                                 <div key={index} style={{display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
                                     <img src={image.url} alt={image.description} style={image.url === line2 ? {height: "5px"} : { height: "55px", width: "55px" }} />
-                                    <p style={{color: image.color, textAlign: 'center', whiteSpace: 'nowrap'}}>{image.description}</p>
+                                    <p style={{color: image.color, textAlign: 'center', whiteSpace: 'nowrap', fontSize: '12px'}}>{image.description}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                        <img src={image4} alt='description' style={{ width: '400px' }} />
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60%', marginTop: '20px' }}>
+                        <img src={image4} alt='description' style={{ width: '385px', height: '385px' }} />
                     </div>
                     <Box component="div" sx={{ width: "450px", mx: "auto" }}>
-                        <Typography fontSize="30px" fontWeight="bold" style={{ textAlign: 'center' }}>
+                        <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '26px' }}>
                             Successful registration!
-                        </Typography>
-                        <Typography style={{ fontSize: "19px", color: '#777B7E', textAlign: 'center'}} variant="h5">
+                        </div>
+                        <div style={{ fontSize: "16px", color: "rgb(192, 192, 192)", textAlign: 'center'}} variant="h5">
                             The first step to an extraordinary experience with us.
-                        </Typography>
-                        <Button style={{ color: 'red', width:'450px', height: '60px', marginTop: '20px', border: '1px solid', borderRadius: '10px', textTransform: 'none', fontSize: '17px' }}>
-                            <span><img src={button} alt='description' style={{ marginRight: '10px' }}/></span>
+                        </div>
+                        <button style={{ 
+                            color: 'red', 
+                            width: '380px', 
+                            height: '58px', 
+                            marginTop: '20px', 
+                            border: '2px solid', 
+                            borderRadius: '6px', 
+                            textTransform: 'none', 
+                            fontSize: '16px', 
+                            display: 'flex', // Menambahkan flexbox
+                            alignItems: 'center', // Menengahkan konten secara vertikal
+                            justifyContent: 'center', // Menengahkan konten secara horizontal
+                            fontWeight: '600',
+                            position: 'absolute',  // Penempatan absolut relatif terhadap halaman atau elemen pembungkus
+                            top: '85%',           // 50% dari atas
+                            left: '50%',          // 50% dari sisi kiri
+                            transform: 'translate(-50%, -50%)'
+                            }}>
+                            <span>
+                                <img src={button} alt='description' style={{ 
+                                    height: '20px', // Anda bisa menyesuaikan ukuran gambar sesuai kebutuhan
+                                    marginRight: '10px' // Memberikan jarak antara gambar dan teks
+                                }}/>
+                            </span>
                             let's explore!
-                        </Button>
+                        </button>
                     </Box>
                 </div>
             </div>

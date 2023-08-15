@@ -1,9 +1,11 @@
+import '../assets/css/global.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from "@mui/material";
 // import Login from "./pages/Login"
 
 import Asset from "../assets/image/Asset 1@2x.png"
 import Check from "../assets/image/Check.png";
+import ABOUT from "../assets/image/AboutOSPRO.png";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,6 +21,7 @@ import Money from "../assets/image/Money.png";
 import Vector from "../assets/image/Vector.png";
 import Registrasi from "../components/Registrasi";
 import ProjectControl from "../components/ProjectControl";
+import { Html } from '@mui/icons-material';
 
 
 function Home() {
@@ -68,7 +71,7 @@ function Home() {
         "Aplication Integration",
       ],
       price: "$25",
-      desc: "Ideal for individuals who who need advanced features and tools for cl...", 
+      desc: "Ideal for individuals who need advanced features and tools for cl...", 
     },
     {
       title: "Premium",
@@ -125,25 +128,34 @@ function Home() {
         </div>
 
         <div id="OurFeature">
-        <div className="bg-gray-50 py-10">
+        <div className="ourfeature py-10">
           <TitleDesc
             title={<h1 style={{ background: "linear-gradient(to right, #D8100B, #DE674D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Our Feature</h1>}
             desc={`Special feature create crate just for you, you can manage your plan and
                   task better and faster than using other app`}
           />
 
-          <div className="container max-w-8xl mx-auto grid grid-cols-4 space-x-3">
+          <div className="container max-w-6xl grid grid-cols-4 space-x-3">
             <OurFeatures title="Curve" imge={Curve} desc="Unleash your potential with Curve Services. Experience innovation, growth, and success."/>
             <OurFeatures title="Absence" imge={Absence} desc="Effortlessly manage absence with Absence Services. Simplify processes, save time, and ensure smooth operation."/>
             <OurFeatures title="Budget" imge={Money} desc="Empower your financial journey with Budget Services. Take Control, set goals, and thrive."/>
             <OurFeatures title="Gantt" imge={Vector} desc="Visualize your project's progress with Gantt Chart Services. Simplify planning, track milestone, and achive project success"/>
           </div>
-          <hr className="my-3 border-gray-"></hr>
+          <hr className="garisourfeature"></hr>
         </div>
+        </div>
+
+        <div className="AboutOspro">
+          <TitleDesc 
+            title={<h1>
+                    About OS<span style={{ color: '#D8100B' }}>PRO</span>
+                  </h1>}
+            desc={"Take control of your projects with our comprehensive website management solution. From planning to execution, our platform provides all the tools you need to streamline your project management process. With intuitive features and seamless collaboration, you can effectively manage tasks, track progress, and keep your team connected. Experience the power of efficient project management and unlock your team's full potential. Start optimizing your projects today with our website management platform."} 
+          />
+          <img src={ABOUT} style={{ width:'90%', marginLeft:'5%' }}/>
         </div>
           
-
-        <div className="bg-gray-50 py-10" id="CardPlan" >
+        <div className="cardplan py-10" id="CardPlan" >
           <TitleDesc
             title={<>
                     <h1>Powerful features for</h1>
@@ -152,7 +164,7 @@ function Home() {
             desc={`choose a plan that's right for you`}
           />
 
-          <div className="container max-w-7xl mx-auto grid grid-cols-4">
+          <div className="container max-w-6xl mx-auto grid grid-cols-4" style={{ marginLeft:'5%' }}>
             {plans.map((val, index,) => {
               return (
                 <CardPlan
@@ -166,7 +178,7 @@ function Home() {
           </div>
 
         
-          <div className="bg-gray-50 py-10" id="Registrasi">  
+          <div className="registrasi py-10" id="Registrasi">  
             <TitleDesc
               title={
                 <h1>
@@ -176,7 +188,7 @@ function Home() {
               desc={`Start your project with a ospro`}
             />
 
-            <div className="container max-w-7xl mx-auto grid grid-cols-2  items-center " style={{ paddingRight: "110px" }}>
+            <div className="container max-w-6xl  grid grid-cols-2  items-center ">
                 <ThemeProvider theme={Theme}>
                   <Registrasi />
                 </ThemeProvider>
@@ -203,7 +215,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="bg-gray-50 py-24">  
+          <div className=" py-24">  
             <TitleDesc
               title={
                 <h1 className="text-bold">

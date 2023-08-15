@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
 import { Box, Button, FormControl, IconButton, Input, Typography } from "@mui/material";
-import "../assets/css/Login.css"
+// import "../assets/css/Login.css"
 
 import image1 from "../assets/image/regis2@1.png";
 import image2 from "../assets/image/regis2@2.png";
@@ -40,32 +40,32 @@ const Register1 = () => {
             <div className="containerStyle">
                 <div style={{ width: '100%' }}>
                     <div style={{ display: 'flex', marginTop: '20px' }}>
-                    <IconButton  onClick={() => navigate('/register1')}>
-                        <ArrowBack style={{ fontSize: '35px' }}/>
-                        <span style={{ fontSize: '20px' }}>Back</span>
+                    <IconButton  onClick={() => navigate('/register1')} style={{ marginLeft: '35px' }}>
+                        <ArrowBack style={{ fontSize: '30px', color: "rgb(192, 192, 192)" }}/>
+                        <span style={{ fontSize: '15px', color: "rgb(192, 192, 192)" }}>Back</span>
                     </IconButton>
                     <div style={{position: 'absolute', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                         {images.map((image, index) => (
                             <div key={index} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                                 <img src={image.url} alt={image.description}  style={image.url === line1 || image.url === line2 ? {height: "5px"} : { height: "55px", width: "55px" }} />
-                                <p style={{color: image.color, textAlign: 'center', whiteSpace: 'nowrap'}}>{image.description}</p>
+                                <p style={{color: image.color, textAlign: 'center', whiteSpace: 'nowrap', fontSize: '12px'}}>{image.description}</p>
                             </div>
                         ))}
                     </div>
                     </div>
-                    <Box component="div" sx={{ mt: 10, width: "450px", mx: "auto" }}>
-                        <Typography fontSize="30px" fontWeight="bold">
+                    <Box component="div" sx={{ mt: 6, width: "380px", mx: "auto" }}>
+                        <div style={{ fontWeight: 'bold', fontSize: '27px' }}>
                             Complete Your Profile!
-                        </Typography>
-                        <Typography style={{ fontSize: "18px", color: '#777B7E'}} variant="h5">
+                        </div>
+                        <div style={{ fontSize: "16px", color: '#777B7E', paddingBottom: '7px' }}>
                             For the purpose of industry regulation, your details are required.
-                        </Typography>
+                        </div>
                             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
                                 <FormControl fullWidth>
-                                <label htmlFor="phone" style={{color: "rgba(0, 0, 0, 0.7)", fontSize: '17px', textDecoration: 'none'}}> 
+                                <label htmlFor="phone" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}> 
                                     Phone number
                                 </label>
-                                <div style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '10px', height: '60px'}}>
+                                <div style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '6px', height: '60px', fontSize: '12px', paddingLeft: '20px'}}>
                                     <select id='country' name='country'>
                                         <option value="Indonesia">+62</option>
                                         <option value="1">+1</option>
@@ -77,18 +77,18 @@ const Register1 = () => {
                                 
                                 </FormControl>
                                 <FormControl fullWidth>
-                                <label htmlFor="address" style={{color: "rgba(0, 0, 0, 0.7)",fontSize: '17px', textDecoration: 'none'}}> 
+                                <label htmlFor="address" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}> 
                                     Your address
                                 </label>
                                 <input name="address" id="address" type="address" placeholder="Please enter address" style={{
-                                border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}} />
+                                border: '1px solid gray', borderRadius: '6px', height: '60px', paddingLeft: '20px', fontSize: '12px'}}/>
                                 </FormControl>
                                 <FormControl fullWidth >
-                                <label fontWeight="bold" style={{color: "rgba(0, 0, 0, 0.7)",fontSize: '17px', textDecoration: 'none'}}>
+                                <label fontWeight="bold" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}>
                                     City 
                                 </label>
                                 <input name="city" id="city" type="city" placeholder="Please input" style={{
-                                border: '1px solid gray', borderRadius: '10px', height: '60px', paddingLeft: '10px'}}/>
+                                border: '1px solid gray', borderRadius: '6px', height: '60px', paddingLeft: '20px', fontSize: '12px'}}/>
                                 </FormControl>
                                 <Box
                                 type="bbox"
@@ -97,9 +97,9 @@ const Register1 = () => {
                                 justifyContent="center"
                                 >
                                 <div className="card-button">
-                                    <Button onClick={() => navigate('/register3')} type="login" style={{ width:'450px', height: '60px', borderRadius: '10px', textTransform: 'none', fontSize: '17px' }}>
+                                    <button onClick={() => navigate('/register3')} type="login" style={{ width:'450px', height: '55px', borderRadius: '6px', textTransform: 'none', fontSize: '16px' }}>
                                     Save and Continue
-                                    </Button>
+                                    </button>
                                 </div>
                                 </Box>
                             </Box>

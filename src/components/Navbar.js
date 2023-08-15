@@ -21,8 +21,8 @@ const NavigationBar = () => {
 
   return (
     <div>
-      <Navbar className="navbar mx-auto flex flex-row pt-6 items-center justify-center bg-white" style={{ position: "fixed", top: 0, width: "100%", paddingBottom:"10px", paddingTop:"10px" }}>
-        <img src={Logo} style={{ width:"111px", height:"25px", marginLeft:"185px" }} alt="Logo"></img>
+      <Navbar className="navbar mx-auto flex flex-row pt-6 items-center justify-center bg-white" style={{ position: "fixed", top: 0, width: "100%", paddingBottom:"10px", paddingTop:"20px" }}>
+        <img src={Logo} style={{ width:"100px", height:"20px", marginLeft:"64px" }} alt="Logo"></img>
         <div className="flex-1">
           <Nav className="flex flex-row space-x-20" style={{ listStyleType: "none", margin: 0, padding: 0, display: "flex", justifyContent: "center" }}>
             <Nav.Link className="nav-link" onClick={() => handleScroll("#Home")}>Home</Nav.Link>
@@ -33,7 +33,7 @@ const NavigationBar = () => {
           </Nav>
         </div>
         <div className="space-x-6 flex flex-row items-center">
-          <button onClick={() => navigate('/login')} className="border rounded-md bg-red-500 text-white" style={{ width:"73px", height:"40px", borderRadius:"5px", fontSize:"16px", marginRight:"185px", backgroundColor: '#D8100B', color: '#FFFFFF' }}>
+          <button onClick={() => navigate('/login')} className="border rounded-md bg-red-500 text-white" style={{ width:"73px", height:"40px", borderRadius:"5px", fontSize:"16px", marginRight:"64px", backgroundColor: '#D8100B', color: '#FFFFFF' }}>
             Login
           </button>
         </div>
