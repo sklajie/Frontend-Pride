@@ -111,8 +111,8 @@
 }
 .hoverregistrasi:hover{
 
-  border-color: blue !important;
- box-shadow: '0 0 3px rgba(0, 0, 255, 0.3)';
+  border-color: #559FF8 !important;
+  box-shadow: '0 0 3px rgba(0, 0, 255, 0.3)';
 }
 
 

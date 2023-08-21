@@ -2,13 +2,7 @@ import "../assets/css/global.css";
 import React, { useState } from "react";
 import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import {
-  Box,
-  Button,
-  FormControl,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Box, Button, FormControl, IconButton, Typography } from "@mui/material";
 // import "../assets/css/Login.css"
 
 import image1 from "../assets/image/regis1@1.png";
@@ -187,7 +181,6 @@ const Register1 = () => {
             </FormControl>
             <FormControl fullWidth>
               <label
-                fontWeight="bold"
                 style={{
                   color: "rgb(105, 105, 105)",
                   fontWeight: "bold",
@@ -197,7 +190,7 @@ const Register1 = () => {
               >
                 Create password*
               </label>
-              <div
+              <div className="hoverregistrasi"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -206,26 +199,27 @@ const Register1 = () => {
                   height: "60px",
                 }}
               >
-                <input className="hoverregistrasi"
+                <input
                   name="password"
                   id="password"
                   type={values.showPassword ? "text" : "password"}
                   onChange={handlePasswordChange("password")}
                   placeholder="Enter password"
                   style={{
-                    borderLeft: "1px solid gray",
-                    borderRadius: "6px",
                     height: "55px",
                     flex: 1,
                     paddingLeft: "20px",
                     fontSize: "12px",
+                    border: 'none',
+                    backgroundColor: 'transparent',
+                    outline: 'none'
                   }}
                 />
                 <button
                   onClick={handleClickShowPassword}
-                  style={{ background: "none", border: "none" }}
+                  style={{ background: "none", border: "none", fontSize: '10px', marginRight: '20px' }}
                 >
-                  {values.showPassword ? "UnShow" : "Show"}
+                  {values.showPassword ? "Hide" : "Show"}
                 </button>
               </div>
             </FormControl>

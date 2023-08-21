@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Select, { components } from "react-select";
 import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
 import "../assets/css/global.css"
@@ -10,6 +11,8 @@ import image2 from "../assets/image/regis2@2.png";
 import image3 from "../assets/image/regis1@3.png";
 import line1 from "../assets/image/line1.png";
 import line2 from "../assets/image/line2.png";
+import indonesiaFlag from "../assets/image/Indonesia.png"
+import americaFlag from "../assets/image/USA.png"
 
 
 const Register1 = () => {
@@ -36,6 +39,42 @@ const Register1 = () => {
         console.log(formState);
     };
 
+    const options = [
+        {
+            value: 'Indonesia',
+            label: '+62',
+            icon: indonesiaFlag
+        },
+        {
+            value: 'America',
+            label: '+1',
+            icon: americaFlag
+        }
+    ];
+
+    const formatOptionLabel = (option) => (
+        <div>{option.label}</div>
+    );
+
+    const SingleValue = ({ children, ...props }) => (
+        <components.SingleValue {...props}>
+            <img src={props.data.icon} alt="" width="20" style={{ marginRight: '8px' }} />
+            {children}
+        </components.SingleValue>
+    );
+
+    const DropdownIndicator = (props) => {
+        return (
+            <components.DropdownIndicator {...props}>
+                <span>⌵</span>
+            </components.DropdownIndicator>
+        );
+    };
+
+    const handleInput = (e) => {
+        e.target.value = e.target.value.replace(/[^0-9]/g, ''); // Menggantikan semua karakter non-angka dengan string kosong
+    }
+
     return (
         <div>
             <div className="containerStyle">
@@ -61,37 +100,91 @@ const Register1 = () => {
                         <div style={{ fontSize: "16px", color: '#777B7E', paddingBottom: '7px' }}>
                             For the purpose of industry regulation, your details are required.
                         </div>
-                            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-                                <FormControl fullWidth>
+                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+                            <FormControl fullWidth>
                                 <label htmlFor="phone" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}> 
                                     Phone number
                                 </label>
-                                <div className="custombutton" style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '6px', height: '60px', fontSize: '12px', paddingLeft: '20px'}}>
-                                    <select id='country' name='country'>
-                                        <option value="Indonesia">+62</option>
-                                        <option value="1">+1</option>
-                                    </select>
-
-                                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" style={{
-                                    borderRight: '1px solid gray', borderRadius: '10px', height: '55px', paddingLeft: '10px', flex: 1, }} />
+                                <div className="hoverregistrasi" style={{ display: 'flex', alignItems: 'center', border: '1px solid gray', borderRadius: '6px', height: '60px', fontSize: '12px', paddingLeft: '20px'}}>
+                                    <Select 
+                                        options={options}
+                                        formatOptionLabel={formatOptionLabel}
+                                        components={{ SingleValue, DropdownIndicator }}
+                                        placeholder=""
+                                        styles={{
+                                            container: (provided) => ({
+                                                ...provided,
+                                                flex: 1,
+                                            }),
+                                            option: (provided) => ({
+                                                ...provided,
+                                                paddingLeft: '5px'
+                                            }),
+                                            control: (provided) => ({
+                                                ...provided,
+                                                height: '40px',
+                                                minHeight: '40px',
+                                                width: '100px',
+                                                fontSize: '12px',
+                                                boxShadow: 'none',
+                                                borderLeft: 'none',
+                                                borderColor: 'transparent',
+                                                backgroundColor: 'transparent',
+                                                "&:hover": {
+                                                    borderColor: 'transparent'
+                                                }
+                                            }),
+                                            singleValue: (provided) => ({
+                                                ...provided,
+                                                top: '50%',
+                                                transform: 'translateY(-50%)',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                            }),
+                                            valueContainer: (provided) => ({
+                                                ...provided,
+                                                height: '40px',
+                                                padding: '0 8px',
+                                            }),
+                                            indicatorsContainer: (provided) => ({
+                                                ...provided,
+                                                height: '40px',
+                                            }),
+                                        }}
+                                    />
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone"
+                                        onInput={handleInput}
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                                        style={{
+                                            height: '40px',
+                                            fontSize: '12px',
+                                            paddingLeft: '1px',
+                                            flex: 2,
+                                            border: 'none',       // Menghilangkan border
+                                            backgroundColor: 'transparent',  // Menghilangkan background
+                                            outline: 'none'       // Menghilangkan outline saat difokuskan
+                                        }}
+                                    />
                                 </div>
-                                
-                                </FormControl>
-                                <FormControl fullWidth>
+                            </FormControl>
+                            <FormControl fullWidth>
                                 <label htmlFor="address" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}> 
                                     Your address
                                 </label>
-                                <input className="custombutton" name="address" id="address" type="address" placeholder="Please enter address" style={{
+                                <input className="hoverregistrasi" name="address" id="address" type="address" placeholder="Please enter address" style={{
                                 border: '1px solid gray', borderRadius: '6px', height: '60px', paddingLeft: '20px', fontSize: '12px'}}/>
-                                </FormControl>
-                                <FormControl fullWidth >
+                            </FormControl>
+                            <FormControl fullWidth >
                                 <label fontWeight="bold" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '7px'}}>
                                     City 
                                 </label>
-                                <input className="custombutton" name="city" id="city" type="city" placeholder="Please input" style={{
+                                <input className="hoverregistrasi" name="city" id="city" type="city" placeholder="Please input" style={{
                                 border: '1px solid gray', borderRadius: '6px', height: '60px', paddingLeft: '20px', fontSize: '12px'}}/>
-                                </FormControl>
-                                <Box
+                            </FormControl>
+                            <Box
                                 type="bbox"
                                 component="div"
                                 display="flex"
@@ -102,9 +195,9 @@ const Register1 = () => {
                                     Save and Continue
                                     </button>
                                 </div>
-                                </Box>
                             </Box>
                         </Box>
+                    </Box>
                 </div>
             </div>
         </div>

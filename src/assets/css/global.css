@@ -7,6 +7,9 @@ body {
     max-width: 100%;             
     overflow-x: hidden;
 }
+.home{
+    max-width: 100%;
+}
 
 @media (max-width: 600px) {
     .sidebar {
@@ -53,3 +56,48 @@ body {
 .custombutton:hover .gmbr img{
     filter: brightness(2) saturate(0);
 }
+
+.hoverregistrasi{
+    background-color: white !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hoverregistrasi:hover{
+    border-color: #559FF8 !important;
+    box-shadow: '0 0 3px rgba(0, 0, 255, 0.3)';
+}
+
+/* register 2 */
+
+.bendera select {
+    appearance: none;
+    padding-left: 30px; /* Space for the flag */
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.bendera select[data-country='Indonesia'] {
+    background-image: url('../image/Indonesia.png');
+}
+
+.bendera select[data-country='1'] {
+    background-image: url('../image/USA.png');
+}
+
+/* CSS untuk mengatur gambar bendera di sebelah kiri angka */
+option.flag-indonesia {
+    background-image: url('../image/Indonesia.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left center;
+    padding-left: 25px;
+}
+
+option.flag-america {
+    background-image: url('../image/USA.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left center;
+    padding-left: 25px;
+}
+

@@ -65,7 +65,7 @@ const Register1 = () => {
                                 <label htmlFor="phone" style={{color: "rgb(105, 105, 105)", fontWeight: 'bold', fontSize: '14px', paddingBottom: '10px'}}> 
                                     Your experience
                                 </label>
-                                <input className="custombutton" name="phone" id="phone" type="phone" style={{
+                                <input className="hoverregistrasi" name="phone" id="phone" type="phone" style={{
                                 border: '1px solid gray', borderRadius: '6px', height: '100px', paddingLeft: '20px', fontSize: '12px'}} />
                                 </FormControl>
                                 <br/>

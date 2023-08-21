@@ -2,6 +2,7 @@ import '../assets/css/global.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from "@mui/material";
 // import Login from "./pages/Login"
+// import "../assets/css/global.css"
 
 import Asset from "../assets/image/Asset 1@2x.png"
 import Check from "../assets/image/Check.png";
@@ -121,21 +122,23 @@ function Home() {
 
     <>
     <Navbar />
-    <div className="bg-white">
+    <div className="home bg-white">
       <main>
         <div className="Home">
           <ProjectControl />
         </div>
 
         <div id="OurFeature">
-        <div className="ourfeature py-10">
+        <div className="ourfeature mt-[-90px]">
           <TitleDesc
-            title={<h1 style={{ background: "linear-gradient(to right, #D8100B, #DE674D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Our Feature</h1>}
-            desc={`Special feature create crate just for you, you can manage your plan and
-                  task better and faster than using other app`}
+            title={<h1 style={{ background: "linear-gradient(to right, #D8100B, #DE674D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", paddingBottom: '30px' }}>Our Feature</h1>}
+            desc={<div>
+              <p>Special feature create crate just for you, you can manage your plan and</p>
+              <p>task better and faster than using other app</p>
+            </div>}
           />
 
-          <div className="container max-w-6xl grid grid-cols-4 space-x-3">
+          <div className="container max-w-6xl grid grid-cols-4 space-x-4">
             <OurFeatures title="Curve" imge={Curve} desc="Unleash your potential with Curve Services. Experience innovation, growth, and success."/>
             <OurFeatures title="Absence" imge={Absence} desc="Effortlessly manage absence with Absence Services. Simplify processes, save time, and ensure smooth operation."/>
             <OurFeatures title="Budget" imge={Money} desc="Empower your financial journey with Budget Services. Take Control, set goals, and thrive."/>
